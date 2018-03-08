@@ -1,0 +1,414 @@
+//=========================================
+//      VARIABLES
+//=========================================
+
+    $main_color: #006699;
+
+//=========================================
+//      IMPORTS
+//=========================================
+
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700,800,900');
+
+//=========================================
+//      MIXINS
+//=========================================
+
+
+
+
+//=========================================
+//      GLOBAL STYLES
+//=========================================
+
+    *, *:before, *:after { box-sizing: border-box; }
+
+    body {
+        // display: flex;
+        // justify-content: flex-end;
+        color: $main_color;
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 18px;
+    }
+
+    textarea, 
+    button {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .anthony {
+        // color: green;
+        // font-size: 1em;
+        // background-color: yellow;
+
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: flex-start;
+        // align-items: left;
+    }
+
+    .form-container {
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+
+        // padding: 1em;
+        margin: 1em;
+    }
+
+    .form-head, 
+    .cta button {
+        background-color: $main_color;
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 6px 6px 6px 15px;
+    }
+
+    .cta {
+
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+
+    }
+
+    // .cta {button {
+    //         background-color: $main_color;
+    //         color: #fff;
+    //         font-weight: 500;
+    //         letter-spacing: 1px;
+    //         padding: 6px 6px 6px 15px;
+    //     }}
+
+    .form-body-container {
+        padding: 15px 5px 15px 15px;
+    }
+
+    .fbc-heading {
+        font-weight: bold;
+        color: $main_color;
+    }
+
+    .fbc-body {
+        padding-left: 16px;
+        line-height: 30px;
+    }
+
+    .fbc-body-elt {
+        // line-height: 48px;
+        display: flex;
+        // align-items: center;
+        align-items: flex-start;
+        flex-direction: column;
+        
+        
+    }
+
+    .binary-input, .text-inputs-group {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .binary-input {
+        
+        display: block;
+        // border: 1px solid red;
+        
+        
+        
+        
+    }
+
+    .binary-input, .text-input, .search-elt, .st-line {
+        button {
+            font-size: 16px;
+            height: 40px;
+        }
+        input[type="text"], input[type="email"],  select {
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 18px;
+            height: 40px;
+            // margin: 0 5px;
+            padding: 5px;
+        }
+        select {
+            // margin-left: 15px;
+        }
+    }
+
+    .search-elt {
+        // border: 1px solid red;
+        display: flex;
+        align-items: center;
+        label {
+            margin-right: 15px;
+        }
+        button {
+            margin-left: 15px;
+        }
+    }
+
+
+    .text-inputs-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 13px;
+    }
+
+
+
+
+    .binary-input-subgroup {
+        display: flex;
+        flex-direction: row;
+        padding-left: 26px;
+        flex-wrap: wrap;
+    }
+
+    .bis-input {
+        margin-right: 15px;
+    }
+
+
+
+    .text-inputs-group2, .text-inputs-group, .telephone-block {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 30px;
+        // margin-bottom: 15px;
+    }
+    .text-input-label {
+        // border: 1px solid red;
+        margin-bottom: 3px;
+        &.marked {
+            span {
+                &::after {
+                    content: "*";
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .text-input {
+        // margin-top: 7px;
+
+        &.plate {
+            input {
+                width: 90px;
+            }
+        }
+        .currency {
+            margin-right: 5px;
+        }
+        select {
+            width: 100%;
+        }
+
+
+    }
+
+    .vehicle-block {        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .vehicle-block-label {
+        display: flex;
+        // align-items: center;
+        align-items: flex-end;
+        margin-right: 20px;
+        padding-bottom: 9px;
+    }
+
+    .vehicle-block-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .text-inputs-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+
+        .text-input-label {
+            display: flex;
+            align-items: center;
+
+            span {
+                padding-right: 15px;
+            }
+        }
+    }
+
+    .jeff {
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        input[type="text"] {
+            // margin-bottom: 10px;
+        }
+    }
+
+    .search-elt {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        span, input, button {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    .telephone-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .telephone-block-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+
+
+        .text-input {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            span {
+                margin: 0 10px;
+            }
+
+
+            .telephone-number-field, .telephone-extension {
+
+
+                input {
+                    width: 53px;
+                }
+            }
+        }
+
+        > div:first-child {
+            margin-bottom: 10px;
+        }
+
+        .telephone {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .text-input-label {
+                width: 102px;
+            }
+            .text-input {
+                display: flex;
+                flex-wrap: wrap;
+                line-height: 48px;
+            }
+
+        }
+    }
+
+    .telephone-number {
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .special-instructions {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        .text-inputs-group2 {
+            margin-right: 10px;
+            textarea {
+                width: 100%;
+            }
+        }
+        .symbols-tracker {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .st-line {
+        input {
+            width: 45px;
+            text-align: center;
+        }
+    }
+    .binary-inputs-group2, .text-input3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .fbc-body-elt {
+            margin-right: 15px;
+        }
+    }
+
+
+    .text-input3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .text-input-label {
+            margin-right: 30px;
+        }
+
+        .text-input {
+            flex: auto;
+            padding-right: 10px;
+            width: 70%;
+        }
+
+        textarea {
+            width: 100%;
+            // padding-right: 15px;
+        }
+    }
+
+    // .cta {
+    //     button {
+    //         background-color: $main_color;
+    //         color: #fff;
+    //     }
+    // }
+
+
+//=========================================
+//      SECTION A
+//=========================================
+
+//=========================================
+//      SECTION B
+//=========================================
+    
+
+//=========================================
+//      MEDIA QUERIES
+//=========================================
+
+
+    @media screen and (max-width: 400px) {
+
+        
+    }
